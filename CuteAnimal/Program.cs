@@ -8,37 +8,15 @@ namespace CuteAnimal
 {
     public class Program
     {
-        private CatType type;
-        private Feed hungry;
-        private Mood mood;
-        private Vector3 dimensions;
-        private string name;
-        private float weight;
-        private int age;
+
 
         private static void Main(string[] args)
         {
+            Cat a = new Cat("pandora");
+            Cat b = new Cat("cassi", 12, 12.2f, 1, Mood.Grumpy, CatType.MaineCoon, Feed.Full);
 
-        }
-
-        private void MakeSound()
-        {
-            
-            Random randNumber = new Random();
-            int a = randNumber.Next(0, 3);
-
-            switch (a)
-            {
-                case 0:
-                    Console.WriteLine("Meow!");
-                    break;
-                case 1:
-                    Console.WriteLine("purr!");
-                    break;
-                case 2:
-                    Console.WriteLine("grr!");
-                    break;
-            }
+            Console.WriteLine(a.type);
+            Console.WriteLine(b.type);
         }
     }
 }
